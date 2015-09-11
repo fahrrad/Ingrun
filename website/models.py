@@ -24,3 +24,7 @@ class Exhibition(WorkOfArt):
         verbose_name = "Exhibition"
 
 
+class PressCoverage(models.Model):
+    pass
+
+
