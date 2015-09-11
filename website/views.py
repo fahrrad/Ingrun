@@ -13,3 +13,7 @@ def projects(request):
 
 def press(request):
     return render(request, "press.html")
+
+
+def images(request):
+    return render(request, "images.html")
