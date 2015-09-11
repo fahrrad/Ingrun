@@ -3,5 +3,15 @@
 {% block title %}Projeckte{% endblock %}
 
 {% block header %}
-Projecte
+Projeckte
+{% endblock %}
+
+{% block body %}
+
+<ul>
+    {% for project in projects %}
+        <li>{{ project.title }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
