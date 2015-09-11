@@ -9,3 +9,7 @@ def index(request):
 
 def projects(request):
     return render(request, "projects.html")
+
+
+def press(request):
+    return render(request, "press.html")

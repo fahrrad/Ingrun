@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from website.views import index, projects
+from website.views import index, projects, press
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -23,4 +23,5 @@ urlpatterns = [
     # site pages
     url(r'^$', index, name="index"),
     url(r'^projects/$', projects, name="projects"),
+    url(r'^press/$', press, name="press"),
 ]
