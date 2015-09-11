@@ -17,3 +17,7 @@ def press(request):
 
 def images(request):
     return render(request, "images.html")
+
+
+def contact(request):
+    return render(request, "contact.html")
