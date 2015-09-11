@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from website.views import index
+from website.views import index, projects
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
     # site pages
     url(r'^$', index, name="index"),
+    url(r'^projects/$', projects, name="projects"),
 ]
