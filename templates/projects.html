@@ -6,11 +6,30 @@
 Projeckte
 {% endblock %}
 
+{% block left-side-menu %}
+    <ul>
+        <li>Theater
+        <br>
+            <ul>
+                {% for theater_play in theater_plays %}
+                    <li><a href="#{{ theater_play.title }}">{{ theater_play.title }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </li>
+        <li>Kunst</li>
+        <li>Filme</li>
+    </ul>
+{% endblock %}
+
 {% block body %}
 
 <ul>
-    {% for project in projects %}
-        <li>{{ project.title }}</li>
+    {% for theater_play in theater_plays %}
+        <li id="{{ theater_play.title }}">
+            <h2>{{ theater_play.title }}</h2>
+            <br>{{ theater_play.description }}
+        </li>
     {% endfor %}
 </ul>
 

@@ -5,3 +5,31 @@ body {
     padding: 40px 15px;
     text-align: center;
 }
+
+body {
+    margin: 0;
+    background-position: center top;
+}
+
+body.projects {
+    background-image: url("/static/img/background_projects.jpg");
+}
+
+body.contact {
+    background-image: url("/static/img/background_contact.jpg");
+}
+
+body.press {
+    background-image: url("/static/img/background_press.jpg");
+}
+
+body.images {
+    background-image: url("/static/img/background_images.jpg");
+}
+
+.navbar-inverse{
+    background-image: none;
+    background-color: transparent;
+    border-color: transparent;
+
+}
