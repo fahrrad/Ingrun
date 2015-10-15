@@ -29,6 +29,9 @@ class Exhibition(WorkOfArt):
 
 
 class PressCoverage(models.Model):
-    pass
+    work_of_art = models.ForeignKey(WorkOfArt, null=True)
+    title = models.CharField(max_length=1024)
+    text = models.TextField()
+
 
 

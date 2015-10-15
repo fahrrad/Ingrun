@@ -5,3 +5,16 @@
 {% block header %}
 Presse
 {% endblock %}
+
+{% block body %}
+
+<ul>
+    {% for press_coverages in press_coverages %}
+        <li id="{{ press_coverages.title }}">
+            <h2>{{ press_coverages.title }}</h2>
+            <br>{{ press_coverages.text }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

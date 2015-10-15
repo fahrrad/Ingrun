@@ -3,11 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 
 # Index page
-from website.models import TheaterPlay
+from website.models import TheaterPlay, PressCoverage
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {'body_class': 'index'})
 
 
 def projects(request):
@@ -17,7 +17,9 @@ def projects(request):
 
 
 def press(request):
-    return render(request, "press.html", {'body_class': 'press'})
+    press_coverages = PressCoverage.objects.all()
+    return render(request, "press.html", {'press_coverages': press_coverages,
+                                          'body_class': 'press'})
 
 
 def images(request):

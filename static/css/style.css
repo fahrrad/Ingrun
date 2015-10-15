@@ -9,6 +9,7 @@ body {
 body {
     margin: 0;
     background-position: center top;
+
 }
 
 body.projects {
@@ -25,6 +26,10 @@ body.press {
 
 body.images {
     background-image: url("/static/img/background_images.jpg");
+}
+
+body.index {
+    background-image: url("/static/img/background_projects.jpg");
 }
 
 .navbar-inverse{
