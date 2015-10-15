@@ -3,13 +3,13 @@
 {% block title %}Projeckte{% endblock %}
 
 {% block header %}
-Projeckte
+    Projeckte
 {% endblock %}
 
 {% block left-side-menu %}
     <ul>
         <li>Theater
-        <br>
+            <br>
             <ul>
                 {% for theater_play in theater_plays %}
                     <li><a href="#{{ theater_play.title }}">{{ theater_play.title }}</a></li>
@@ -17,20 +17,53 @@ Projeckte
 
             </ul>
         </li>
-        <li>Kunst</li>
-        <li>Filme</li>
+        <li>Kunst
+            <br>
+            <ul>
+                {% for exhibition in exhibitions %}
+                    <li><a href="#{{ exhibition.title }}">{{ exhibition.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Filme
+            <br>
+            <ul>
+                {% for movie in movies %}
+                    <li><a href="#{{ movie.title }}">{{ movie.title }}</a></li>
+                {% endfor %}
+            </ul>
+
     </ul>
 {% endblock %}
 
 {% block body %}
 
-<ul>
-    {% for theater_play in theater_plays %}
-        <li id="{{ theater_play.title }}">
-            <h2>{{ theater_play.title }}</h2>
-            <br>{{ theater_play.description }}
-        </li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for theater_play in theater_plays %}
+            <li id="{{ theater_play.title }}">
+                <h2>{{ theater_play.title }}</h2>
+                <br>{{ theater_play.description }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <ul>
+        {% for movie in movies %}
+            <li id="{{ movie.title }}">
+                <h2>{{ movie.title }}</h2>
+                <br>{{ movie.description }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for exhibition in exhibitions %}
+            <li id="{{ exhibition.title }}">
+                <h2>{{ exhibition.title }}</h2>
+                <br>{{ exhibition.description }}
+            </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}

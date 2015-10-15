@@ -4,18 +4,22 @@ from django.contrib import admin
 from website.models import TheaterPlay, Movie, Exhibition, PressCoverage
 
 
+class WorkOfArtAdmin(admin.ModelAdmin):
+    fields = ('title', 'description')
+
+
 @admin.register(TheaterPlay)
-class TheaterPlayAdmin(admin.ModelAdmin):
+class TheaterPlayAdmin(WorkOfArtAdmin):
     pass
 
 
 @admin.register(Movie)
-class MovieAdmin(admin.ModelAdmin):
+class MovieAdmin(WorkOfArtAdmin):
     pass
 
 
 @admin.register(Exhibition)
-class ExhibitionAdmin(admin.ModelAdmin):
+class ExhibitionAdmin(WorkOfArtAdmin):
     pass
 
 

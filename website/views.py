@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 # Index page
-from website.models import TheaterPlay, PressCoverage
+from website.models import TheaterPlay, PressCoverage, Movie, Exhibition
 
 
 def index(request):
@@ -12,7 +12,11 @@ def index(request):
 
 def projects(request):
     theater_plays = TheaterPlay.objects.all()
+    movies = Movie.objects.all()
+    exhibitions = Exhibition.objects.all()
     return render(request, "projects.html", {'theater_plays': theater_plays,
+                                             'movies': movies,
+                                             'exhibitions': exhibitions,
                                              'body_class': 'projects'})
 
 
